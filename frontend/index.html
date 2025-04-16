@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bus Reservation System</h1>
+    </header>
+
+    <div class="container">
+        <h2>Available Buses</h2>
+        <button onclick="fetchBuses()">View Buses</button>
+        <div id="busList"></div>
+
+        <h2>Book a Bus Ticket</h2>
+        <form id="bookingForm">
+            <label for="busNo">Bus Number:</label>
+            <input type="number" id="busNo" required>
+
+            <label for="passengerName">Passenger Name:</label>
+            <input type="text" id="passengerName" required>
+
+            <label for="numPassengers">Number of Passengers:</label>
+            <input type="number" id="numPassengers" required>
+
+            <label for="travelDate">Travel Date:</label>
+            <input type="date" id="travelDate" required>
+
+            <button type="submit">Book Ticket</button>
+        </form>
+
+        <h2>View Booking History</h2>
+        <button onclick="viewBookingHistory()">View My Bookings</button>
+        <div id="bookingHistory"></div>
+
+        <h2>Cancel Booking</h2>
+        <input type="number" id="cancelBookingId" placeholder="Enter Booking ID">
+        <button onclick="cancelBooking()">Cancel Booking</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
